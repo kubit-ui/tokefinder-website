@@ -1,0 +1,109 @@
+/* 
+ * CONTENT SECTION STYLES
+ * Main component styles for the content text section
+ */
+
+/* Main container
+-------------------------------------------------- */
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: var(--spacing-550) var(--spacing-550);
+}
+
+/* Text content with consistent styling
+-------------------------------------------------- */
+.contentSection__text {
+    font-size: var(--font-size-xxlarge);
+    text-align: center;
+}
+
+.contentSection__text--header {
+    font-size: var(--font-size-xxlarge);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    color: inherit;
+}
+
+/* Paragraph spacing
+-------------------------------------------------- */
+.contentSection__text p:not(:last-child) {
+    margin-bottom: var(--spacing-400);
+}
+
+/* CTA Button
+-------------------------------------------------- */
+.contentSection__button {
+    background-color: var(--accent-turquoise);
+    border: none;
+    border-radius: var(--border-radius-xxlarge);
+    padding: var(--spacing-200) var(--spacing-350);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-100);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: var(--spacing-400);
+    align-self: center;
+    text-decoration: none;
+}
+
+.contentSection__button:hover {
+    transform: scale(1.05);
+}
+
+.contentSection__buttonText {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    line-height: 24px;
+    color: #25263b;
+}
+
+.contentSection__buttonIcon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* RESPONSIVE STYLES
+-------------------------------------------------- */
+
+/* Tablet Breakpoint (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Adjust container padding */
+    .contentSection {
+        padding: var(--spacing-400) var(--spacing-400);
+    }
+
+    /* Reduce text size */
+    .contentSection__text {
+        font-size: var(--font-size-xlarge);
+    }
+
+    /* Reduce paragraph spacing */
+    .contentSection__text p:not(:last-child) {
+        margin-bottom: var(--spacing-300);
+    }
+}
+
+/* Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+
+    /* Further reduce container padding */
+    .contentSection {
+        padding: var(--spacing-300) var(--spacing-300);
+    }
+
+    /* Further reduce text size and change alignment for readability */
+    .contentSection__text {
+        font-size: var(--font-size-large);
+    }
+
+    /* Minimal paragraph spacing */
+    .contentSection__text p:not(:last-child) {
+        margin-bottom: var(--spacing-200);
+    }
+}

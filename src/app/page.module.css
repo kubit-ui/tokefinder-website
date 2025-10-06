@@ -1,0 +1,29 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* CUANDO LLEGUE A 1600 (100 PIXELES MAS QUE MAX-WIDTH DE MAIN) DEBERIA CAMBIAR LA DISPOSICION Y QUE SE PONGAN EN COLUMNA, O EMPEQUEÑECER */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  flex: 1;
+  max-width: 2000px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: var(--background);
+  color: var(--foreground);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

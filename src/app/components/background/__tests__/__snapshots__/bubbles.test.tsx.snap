@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FloatingBubbles > renders correctly 1`] = `
+<div>
+  <div
+    class="_container_371b24"
+  >
+    <div
+      aria-hidden="true"
+      class="_bubble_371b24 _bubble--green-large_371b24"
+    />
+    <div
+      aria-hidden="true"
+      class="_bubble_371b24 _bubble--green-small_371b24"
+    />
+    <div
+      aria-hidden="true"
+      class="_bubble_371b24 _bubble--purple_371b24"
+    />
+    <div
+      aria-hidden="true"
+      class="_bubble_371b24 _bubble--right-1_371b24"
+    />
+    <div
+      aria-hidden="true"
+      class="_bubble_371b24 _bubble--right-2_371b24"
+    />
+  </div>
+</div>
+`;

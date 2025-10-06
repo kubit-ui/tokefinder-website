@@ -1,0 +1,160 @@
+/* 
+ * TOKEFINDER HERO SECTION STYLES
+ * Main component styles for the centered hero section
+ */
+
+/* Main container - full height and centered layout
+-------------------------------------------------- */
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--spacing-600) var(--spacing-650);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main content container - centered
+-------------------------------------------------- */
+.heroSection__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-600);
+    z-index: 5;
+}
+
+/* Logo section
+-------------------------------------------------- */
+.heroSection__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-400);
+}
+
+.heroSection__logo__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: var(--spacing-400);
+    /* 32px */
+    box-shadow: 0px 0px 64px 0px var(--logo-shadow);
+    position: relative;
+}
+
+.heroSection__logo__icon {
+    width: 170px;
+    height: 170px;
+}
+
+/* Main title - Tokefinder
+-------------------------------------------------- */
+.heroSection__title {
+    font-family: var(--font-family-brand);
+    font-size: var(--font-size-xxlarge);
+    font-weight: var(--font-weight-semibold);
+    color: var(--foreground);
+    text-align: center;
+    letter-spacing: 1.92px;
+    margin: 0;
+    line-height: normal;
+}
+
+/* Subtitle - by Kubit
+-------------------------------------------------- */
+.heroSection__subtitle {
+    font-family: var(--font-family-brand);
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    color: var(--foreground);
+    text-align: center;
+    letter-spacing: 1.2px;
+    margin: 0;
+    line-height: normal;
+}
+
+/* Tablet Breakpoint (max-width: 1100px)
+-------------------------------------------------- */
+@media (max-width: 1100px) {
+    .heroSection {
+        padding: var(--spacing-500) var(--spacing-400);
+    }
+
+    .heroSection__content {
+        gap: var(--spacing-500);
+    }
+
+    .heroSection__logo__container {
+        width: 100px;
+        height: 100px;
+        /* Reduce blur effect on tablets */
+        box-shadow: 0px 0px 48px 0px var(--logo-shadow);
+    }
+
+    .heroSection__logo__icon {
+        width: 87px;
+        height: 87px;
+    }
+
+    .heroSection__title {
+        font-size: 28px;
+        letter-spacing: 1.5px;
+    }
+
+    .heroSection__subtitle {
+        font-size: var(--font-size-medium);
+        letter-spacing: 1px;
+    }
+}
+
+/* Small tablet/Large mobile Breakpoint (max-width: 768px)
+-------------------------------------------------- */
+@media (max-width: 768px) {
+    .heroSection__logo__container {
+        /* Further reduce blur effect on smaller devices */
+        box-shadow: 0px 0px 32px 0px var(--logo-shadow);
+    }
+}
+
+/* Mobile Breakpoint (max-width: 480px)
+-------------------------------------------------- */
+@media (max-width: 480px) {
+    .heroSection {
+        padding: var(--spacing-450) var(--spacing-300);
+    }
+
+    .heroSection__content {
+        gap: var(--spacing-450);
+    }
+
+    .heroSection__logo {
+        gap: var(--spacing-350);
+    }
+
+    .heroSection__logo__container {
+        width: 80px;
+        height: 80px;
+        /* Significantly reduce blur effect on mobile */
+        box-shadow: 0px 0px 24px 0px var(--logo-shadow);
+    }
+
+    .heroSection__logo__icon {
+        width: 68px;
+        height: 68px;
+    }
+
+    .heroSection__title {
+        font-size: 24px;
+        letter-spacing: 1.2px;
+    }
+
+    .heroSection__subtitle {
+        font-size: var(--font-size-base);
+        letter-spacing: 0.8px;
+    }
+}

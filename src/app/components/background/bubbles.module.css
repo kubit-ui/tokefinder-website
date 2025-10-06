@@ -1,0 +1,206 @@
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    /* Performance optimizations */
+    will-change: transform;
+    animation: floating 6s ease-in-out infinite;
+}
+
+/* Green bubble - large, positioned on the left */
+.bubble--green-large {
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle at 30% 40%, var(--accent-turquoise) 0%, rgba(99, 214, 200, 0.6) 70%, rgba(99, 214, 200, 0.2) 100%);
+    opacity: 0.8;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-delay: 0s;
+}
+
+/* Green bubble - small, positioned on the left above other bubbles */
+.bubble--green-small {
+    width: 62px;
+    height: 62px;
+    background: radial-gradient(circle at 30% 40%, var(--light-blue-bubble) 0%, rgba(72, 244, 223, 0.7) 60%, rgba(72, 244, 223, 0.3) 100%);
+    opacity: 0.9;
+    left: 160px;
+    top: 25%;
+    animation-delay: 2s;
+}
+
+/* Purple bubble - medium, positioned on the left */
+.bubble--purple {
+    width: 223px;
+    height: 223px;
+    background: radial-gradient(circle at 30% 40%, var(--dark-blue-bubble) 0%, rgba(138, 164, 255, 0.6) 70%, rgba(138, 164, 255, 0.2) 100%);
+    opacity: 0.7;
+    left: -80px;
+    top: 40%;
+    animation-delay: 4s;
+}
+
+/* Right bubble 1 - much larger, positioned far right */
+.bubble--right-1 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle at 30% 40%, var(--border-button) 0%, rgba(132, 135, 194, 0.6) 70%, rgba(132, 135, 194, 0.2) 100%);
+    opacity: 0.8;
+    right: -150px;
+    top: 65%;
+    border-radius: 50%;
+    animation-delay: 1s;
+}
+
+/* Right bubble 2 - much larger, positioned far right, higher up to avoid overlap */
+.bubble--right-2 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle at 30% 40%, var(--accent-turquoise) 0%, rgba(99, 214, 200, 0.6) 70%, rgba(99, 214, 200, 0.2) 100%);
+    opacity: 0.75;
+    right: -120px;
+    top: 45%;
+    border-radius: 50%;
+    animation-delay: 3s;
+}
+
+/* Floating animation - subtle movement */
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    33% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+
+    66% {
+        transform: translateY(5px) rotate(-1deg);
+    }
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+    .bubble--green-large {
+        width: 280px;
+        height: 280px;
+        left: -80px;
+    }
+
+    .bubble--green-small {
+        width: 50px;
+        height: 50px;
+        left: 130px;
+        opacity: 0.8;
+    }
+
+    .bubble--purple {
+        width: 180px;
+        height: 180px;
+        left: -60px;
+    }
+
+    .bubble--right-1 {
+        width: 350px;
+        height: 350px;
+        right: -120px;
+    }
+
+    .bubble--right-2 {
+        width: 300px;
+        height: 300px;
+        right: -100px;
+    }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .bubble--green-large {
+        width: 200px;
+        height: 200px;
+        left: -60px;
+        opacity: 0.6;
+    }
+
+    .bubble--green-small {
+        width: 40px;
+        height: 40px;
+        left: 60px;
+        opacity: 0.6;
+    }
+
+    .bubble--purple {
+        width: 140px;
+        height: 140px;
+        left: -50px;
+        opacity: 0.5;
+    }
+
+    .bubble--right-1 {
+        width: 280px;
+        height: 280px;
+        right: -100px;
+        opacity: 0.6;
+    }
+
+    .bubble--right-2 {
+        width: 240px;
+        height: 240px;
+        right: -80px;
+        opacity: 0.6;
+    }
+
+    /* Reduce animation intensity on mobile */
+    .bubble {
+        animation-duration: 8s;
+    }
+}
+
+/* Additional optimization for small mobile devices */
+@media (max-width: 480px) {
+    .bubble--green-large {
+        width: 150px;
+        height: 150px;
+        left: -50px;
+        opacity: 0.4;
+    }
+
+    .bubble--green-small {
+        width: 30px;
+        height: 30px;
+        left: 40px;
+        opacity: 0.4;
+    }
+
+    .bubble--purple {
+        width: 100px;
+        height: 100px;
+        left: -40px;
+        opacity: 0.3;
+    }
+
+    .bubble--right-1 {
+        width: 200px;
+        height: 200px;
+        right: -70px;
+        opacity: 0.4;
+    }
+
+    .bubble--right-2 {
+        width: 170px;
+        height: 170px;
+        right: -60px;
+        opacity: 0.4;
+    }
+}

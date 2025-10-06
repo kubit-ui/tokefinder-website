@@ -1,0 +1,210 @@
+/* 
+ * FEATURES SECTION STYLES
+ * Main component styles for the features section with image and accordion layout
+ */
+
+/* Main container
+-------------------------------------------------- */
+.featuresSection {
+    padding: var(--spacing-550);
+    background: var(--background);
+    border-radius: var(--border-radius-xxlarge);
+    margin: 0 var(--spacing-550);
+    box-shadow: 0px 0px 64px 0px var(--accent-turquoise);
+}
+
+/* Main container for the two-column layout
+-------------------------------------------------- */
+.featuresSection__container {
+    display: flex;
+    gap: var(--spacing-500);
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Image section (left side)
+-------------------------------------------------- */
+.featuresSection__image {
+    flex: 0 0 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 600px;
+}
+
+.featuresSection__image__mockup {
+    object-fit: contain;
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Content section (right side)
+-------------------------------------------------- */
+.featuresSection__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    min-width: 0;
+    /* Prevents flex item from overflowing */
+}
+
+/* Section title
+-------------------------------------------------- */
+.featuresSection__title {
+    font-family: var(--font-family-brand);
+    font-size: var(--font-size-xxlarge);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--foreground);
+    margin: 0;
+}
+
+/* RESPONSIVE DESIGN
+-------------------------------------------------- */
+
+/* Large desktop and above (1400px+) - Default styles applied above */
+
+/* Standard desktop (1200px - 1399px) */
+@media (max-width: 1399px) {
+    .featuresSection {
+        margin: var(--spacing-500) var(--spacing-400);
+        padding: var(--spacing-500);
+    }
+
+    .featuresSection__container {
+        max-width: 1200px;
+        gap: var(--spacing-400);
+    }
+
+    .featuresSection__image {
+        flex: 0 0 420px;
+        height: 525px;
+    }
+}
+
+/* Medium desktop (1024px - 1199px) */
+@media (max-width: 1199px) {
+    .featuresSection {
+        padding: var(--spacing-450);
+    }
+
+    .featuresSection__container {
+        gap: var(--spacing-350);
+    }
+
+    .featuresSection__image {
+        flex: 0 0 380px;
+        height: 475px;
+    }
+
+    .featuresSection__title {
+        font-size: var(--font-size-xlarge);
+    }
+}
+
+/* Small desktop / Large tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    .featuresSection {
+        padding: var(--spacing-400);
+        margin: var(--spacing-400) var(--spacing-300);
+    }
+
+    .featuresSection__container {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-400);
+        text-align: center;
+    }
+
+    .featuresSection__image {
+        flex: none;
+        order: -1;
+        /* Move image to top */
+        width: 480px;
+        height: 600px;
+    }
+
+    .featuresSection__content {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .featuresSection__title {
+        text-align: center;
+    }
+}
+
+/* Standard tablet (600px - 767px) */
+@media (max-width: 767px) {
+    .featuresSection {
+        padding: var(--spacing-450) var(--spacing-350) var(--spacing-300);
+        margin: var(--spacing-300) var(--spacing-250);
+    }
+
+    .featuresSection__container {
+        gap: var(--spacing-350);
+    }
+
+    .featuresSection__image {
+        width: 450px;
+        height: 562px;
+    }
+
+    .featuresSection__content {
+        max-width: 500px;
+    }
+
+    .featuresSection__title {
+        font-size: var(--font-size-large);
+    }
+}
+
+/* Large mobile (480px - 599px) */
+@media (max-width: 599px) {
+    .featuresSection {
+        padding: var(--spacing-450) var(--spacing-350) var(--spacing-300);
+        margin: var(--spacing-250) var(--spacing-200);
+    }
+
+    .featuresSection__container {
+        gap: var(--spacing-300);
+    }
+
+    .featuresSection__image {
+        width: 400px;
+        height: 500px;
+    }
+
+    .featuresSection__content {
+        gap: var(--spacing-300);
+    }
+}
+
+/* Small mobile (320px - 479px) */
+@media (max-width: 479px) {
+    .featuresSection {
+        padding: var(--spacing-450) var(--spacing-350) var(--spacing-300);
+        margin: var(--spacing-200) var(--spacing-150);
+    }
+
+    .featuresSection__container {
+        gap: var(--spacing-350);
+    }
+
+    .featuresSection__image {
+        width: 320px;
+        height: 400px;
+    }
+
+    .featuresSection__content {
+        gap: var(--spacing-250);
+    }
+
+    .featuresSection__title {
+        font-size: var(--font-size-medium);
+    }
+}
