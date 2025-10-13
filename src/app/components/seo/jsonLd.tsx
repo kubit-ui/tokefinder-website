@@ -1,23 +1,41 @@
 import React from "react";
 
+/**
+ * Schema.org context URL
+ */
+const SCHEMA_CONTEXT = "https://schema.org" as const;
+
+/**
+ * Props for JsonLd component
+ */
 interface JsonLdProps {
-  data: object;
+  /** Schema.org structured data object */
+  data: Record<string, unknown>;
+  /** Optional ID for the script element */
+  id?: string;
 }
 
-export function JsonLd({ data }: JsonLdProps) {
+/**
+ * JsonLd component that renders structured data for SEO
+ * 
+ * @param props - Component props
+ * @returns React script element with JSON-LD data
+ */
+export function JsonLd({ data, id }: JsonLdProps): React.ReactElement {
   return (
     <script
+      id={id}
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data, null, 0) }}
     />
   );
 }
 
-const CONTEXT = "https://schema.org";
-
-// Schema data for Tokefinder Figma Plugin
+/**
+ * Schema data for Tokefinder Figma Plugin
+ */
 export const tokefinderSchema = {
-  "@context": CONTEXT,
+  "@context": SCHEMA_CONTEXT,
   "@type": "SoftwareApplication",
   name: "Tokefinder",
   description:
@@ -51,9 +69,11 @@ export const tokefinderSchema = {
     "Figma plugin, variables, design tokens, token finder, design system, workflow optimization",
 };
 
-// FAQ Schema for better search visibility
+/**
+ * FAQ Schema for better search visibility
+ */
 export const faqSchema = {
-  "@context": CONTEXT,
+  "@context": SCHEMA_CONTEXT,
   "@type": "FAQPage",
   mainEntity: [
     {
@@ -99,9 +119,11 @@ export const faqSchema = {
   ],
 };
 
-// Organization schema for Kubit
+/**
+ * Organization schema for Kubit
+ */
 export const organizationSchema = {
-  "@context": CONTEXT,
+  "@context": SCHEMA_CONTEXT,
   "@type": "Organization",
   name: "Kubit",
   url: "https://kubit-ui.com",
@@ -114,9 +136,11 @@ export const organizationSchema = {
   },
 };
 
-// WebPage schema for the landing page
+/**
+ * WebPage schema for the landing page
+ */
 export const webPageSchema = {
-  "@context": CONTEXT,
+  "@context": SCHEMA_CONTEXT,
   "@type": "WebPage",
   name: "Tokefinder - Ultimate Figma Token Finder Plugin",
   description:
