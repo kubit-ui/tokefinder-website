@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useRef } from "react";
-import styles from "./page.module.css";
-import HeroSection from "./components/heroSection/heroSection";
-import FeaturesSection from "./components/featuresSection/featuresSection";
 import ContentSection from "./components/contentSection/contentSection";
 import DemoSection from "./components/demoSection/demoSection";
+import FeaturesSection from "./components/featuresSection/featuresSection";
 import Footer from "./components/footer/footer";
+import HeroSection from "./components/heroSection/heroSection";
 import BackToTopButton from "./components/ui/backToTopButton/backToTopButton";
+import styles from "./page.module.css";
 
 /**
  * Main home page component that displays all sections of the TokeFinder website

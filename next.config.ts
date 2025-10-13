@@ -88,6 +88,9 @@ const nextConfig: NextConfig = {
 
   // Output configuration for containerization
   output: 'standalone',
+  
+  // Workspace root configuration to silence lockfile warning
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;

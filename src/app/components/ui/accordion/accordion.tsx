@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
 import Image from "next/image";
+import React, { useState, useCallback } from "react";
 import styles from "./accordion.module.css";
 
 /**
@@ -73,7 +73,7 @@ const Accordion: React.FC<AccordionProps> = ({
 }) => {
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
-  const accordionItems = items || DEFAULT_ITEMS;
+  const accordionItems = items ?? DEFAULT_ITEMS;
 
   const toggleItem = useCallback((index: number) => {
     const isCurrentlyOpen = openIndexes.includes(index);
@@ -102,7 +102,7 @@ const Accordion: React.FC<AccordionProps> = ({
     >
       {accordionItems.map((item: AccordionItem, index: number) => (
         <div
-          key={item.id || index}
+          key={item.id ?? index}
           className={`${styles.accordion__item} ${
             openIndexes.includes(index) ? styles["accordion__item--open"] : ""
           }`}
@@ -112,8 +112,8 @@ const Accordion: React.FC<AccordionProps> = ({
             className={styles.accordion__header}
             onClick={() => toggleItem(index)}
             aria-expanded={openIndexes.includes(index)}
-            aria-controls={`accordion-content-${item.id || index}`}
-            id={`accordion-header-${item.id || index}`}
+            aria-controls={`accordion-content-${item.id ?? index}`}
+            id={`accordion-header-${item.id ?? index}`}
           >
             <span className={styles.accordion__title}>{item.title}</span>
             <div 
@@ -135,8 +135,8 @@ const Accordion: React.FC<AccordionProps> = ({
           </button>
           <div 
             className={styles.accordion__content}
-            id={`accordion-content-${item.id || index}`}
-            aria-labelledby={`accordion-header-${item.id || index}`}
+            id={`accordion-content-${item.id ?? index}`}
+            aria-labelledby={`accordion-header-${item.id ?? index}`}
             role="region"
           >
             <div className={styles.accordion__content__inner}>
