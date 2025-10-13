@@ -1,7 +1,7 @@
-import React from "react";
 import Image from "next/image";
-import styles from "./heroSection.module.css";
+import React from "react";
 import AnimateOnScroll from "../ui/animateOnScroll/animateOnScroll";
+import styles from "./heroSection.module.css";
 
 /**
  * Hero section component that displays the main title, logo, and subtitle

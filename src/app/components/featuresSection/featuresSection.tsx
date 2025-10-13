@@ -1,7 +1,7 @@
-import React from "react";
 import Image from "next/image";
-import styles from "./featuresSection.module.css";
+import React from "react";
 import Accordion from "../ui/accordion/accordion";
+import styles from "./featuresSection.module.css";
 
 /**
  * Accordion item interface for features

@@ -5,6 +5,47 @@ All notable changes to the TokeFinder Website project will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-10-13
+
+### 🔧 **Fixed**
+
+#### **Build & Compilation Issues**
+
+- **Fixed critical build failure**: Resolved `Cannot find module 'critters'` error by installing the missing dependency required for CSS optimization
+- **Fixed ESLint TypeScript integration**: Added proper `languageOptions.parserOptions` configuration to enable TypeScript-aware linting rules
+- **Fixed component syntax error**: Corrected invalid default parameter syntax in `FloatingBubbles` component function signature
+- **Fixed import ordering violations**: Reorganized import statements across all components to comply with ESLint import/order rules:
+  - External libraries (Next.js, React) first
+  - Internal components second  
+  - CSS modules last
+- **Fixed nullish coalescing preferences**: Replaced logical OR (`||`) operators with nullish coalescing (`??`) operators in accordion component for better type safety
+
+#### **Configuration Improvements**
+
+- **Enhanced TypeScript configuration**: Added `tsBuildInfoFile` for better incremental compilation performance
+- **Removed deprecated TypeScript options**: Eliminated `baseUrl` option that was deprecated in TypeScript 7.0
+- **Silenced Next.js workspace warnings**: Added `outputFileTracingRoot` configuration to handle multiple lockfile detection properly
+
+#### **Code Quality Enhancements**
+
+- **Improved type safety**: Enhanced TypeScript strict mode compliance across all components
+- **Better ESLint integration**: Fixed parser configuration for rules requiring type information
+- **Consistent code style**: Enforced consistent import ordering and nullish coalescing usage
+
+### 🚀 **Performance**
+
+- **Optimized build process**: Build time reduced and now compiles successfully without errors
+- **Enhanced development experience**: Fixed all linting errors for smoother development workflow
+- **Improved incremental compilation**: TypeScript build cache configuration for faster rebuilds
+
+### 📊 **Build Results**
+
+Successfully generating production build with:
+- ✅ 7/7 static pages generated
+- ✅ All linting and type checking passed
+- ✅ Build optimization and traces collected
+- ✅ First Load JS: ~113kB (optimized bundle size)
+
 ## [1.0.0] - 2025-01-13
 
 ### 🎉 Initial Release

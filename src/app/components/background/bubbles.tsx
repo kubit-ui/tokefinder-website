@@ -16,7 +16,7 @@ interface FloatingBubblesProps {
  * @param props - Component props
  * @returns React component
  */
-function FloatingBubbles({ className = "" }: FloatingBubblesProps = {}): React.ReactElement {
+function FloatingBubbles({ className = "" }: FloatingBubblesProps): React.ReactElement {
   return (
     <div className={`${styles.container} ${className}`.trim()}>
       {/* Large green bubble on the left */}

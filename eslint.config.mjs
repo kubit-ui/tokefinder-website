@@ -17,6 +17,12 @@ const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: __dirname,
+      },
+    },
     rules: {
       // Code quality rules
       'no-console': ['warn', { allow: ['warn', 'error'] }],
