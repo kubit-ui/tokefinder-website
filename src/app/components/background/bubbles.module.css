@@ -1,3 +1,7 @@
+/* ============================
+ * FLOATING BUBBLES COMPONENT
+ * ============================ */
+
 .container {
     position: fixed;
     width: 100%;
@@ -9,7 +13,7 @@
 
 .bubble {
     position: absolute;
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
     /* Performance optimizations */
     will-change: transform;
     animation: floating 6s ease-in-out infinite;
@@ -75,7 +79,6 @@
 
 /* Floating animation - subtle movement */
 @keyframes floating {
-
     0%,
     100% {
         transform: translateY(0px) rotate(0deg);
@@ -163,7 +166,7 @@
 
     /* Reduce animation intensity on mobile */
     .bubble {
-        animation-duration: 8s;
+        animation-duration: 16s;
     }
 }
 

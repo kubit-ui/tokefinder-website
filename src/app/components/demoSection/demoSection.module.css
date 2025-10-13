@@ -6,199 +6,198 @@
 /* Main container - full width with structured layout
 -------------------------------------------------- */
 .demoSection {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    padding: 0 var(--spacing-550);
-    margin: 0 var(--spacing-550);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 0 var(--spacing-550);
+  margin: 0 var(--spacing-550);
 }
 
 /* Top section - Highlight area with color selector image
 -------------------------------------------------- */
 .demoSection__highlight {
-    background-color: #c3c4d7;
-    padding: var(--spacing-400) var(--spacing-600);
-    border-radius: var(--border-radius-xxlarge) var(--border-radius-xxlarge) 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--border-button);
+  padding: var(--spacing-400) var(--spacing-600);
+  border-radius: var(--border-radius-xxlarge) var(--border-radius-xxlarge) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .demoSection__colorSelectorImage {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius-large);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-medium);
 }
 
 /* Middle section - Content area with title and CTA
 -------------------------------------------------- */
 .demoSection__content {
-    background-color: white;
-    padding: var(--spacing-500) var(--spacing-650);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  background-color: white;
+  padding: var(--spacing-500) var(--spacing-650);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 /* Background loading icon - left side of content section */
 .demoSection__content::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 75%;
-    transform: translateY(-50%);
-    width: 382px;
-    height: 400px;
-    background-image: url('/icon_loading_large.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 75%;
+  transform: translateY(-50%);
+  width: 382px;
+  height: 400px;
+  background-image: url('/icon_loading_large.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .demoSection__article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-400);
-    max-width: 1400px;
-    width: 100%;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-400);
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .demoSection__text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-300);
-    text-align: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  text-align: center;
+  width: 100%;
 }
 
 .demoSection__title {
-    font-family: 'Baloo Tammudu 2', sans-serif;
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xxlarge);
-    line-height: 40px;
-    color: #282b67;
-    margin: 0;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xxlarge);
+  line-height: 40px;
+  color: var(--background);
+  margin: 0;
 }
 
 .demoSection__subtitle {
-    font-family: 'Baloo Tammudu 2', sans-serif;
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-medium);
-    line-height: 24px;
-    color: #282b67;
-    margin: 0;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: 24px;
+  color: var(--background);
+  margin: 0;
 }
 
 /* CTA Button
 -------------------------------------------------- */
 .demoSection__button {
-    background-color: var(--accent-turquoise);
-    border: none;
-    border-radius: var(--border-radius-xxlarge);
-    padding: var(--spacing-200) var(--spacing-350);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-100);
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    text-decoration: none;
+  background-color: var(--accent-turquoise);
+  border: none;
+  border-radius: var(--border-radius-xxlarge);
+  padding: var(--spacing-200) var(--spacing-350);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-100);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-decoration: none;
 }
 
 .demoSection__button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .demoSection__buttonText {
-
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-base);
-    line-height: 24px;
-    color: #25263b;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  color: var(--background);
 }
 
 .demoSection__buttonIcon {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 /* Bottom section - Plugin preview with description
 -------------------------------------------------- */
 .demoSection__preview {
-    background-color: white;
-    border-radius: 0 0 var(--border-radius-xxlarge) var(--border-radius-xxlarge);
-    padding: var(--spacing-500) var(--spacing-650);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-400);
-    position: relative;
+  background-color: white;
+  border-radius: 0 0 var(--border-radius-xxlarge) var(--border-radius-xxlarge);
+  padding: var(--spacing-500) var(--spacing-650);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-400);
+  position: relative;
 }
 
 /* Background loading icon - right side of preview section */
 .demoSection__preview::after {
-    content: '';
-    position: absolute;
-    right: var(--spacing-300);
-    bottom: 0;
-    width: 282px;
-    height: 184px;
-    background-image: url('/icon_loading_medium.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
+  content: '';
+  position: absolute;
+  right: var(--spacing-300);
+  bottom: 0;
+  width: 282px;
+  height: 184px;
+  background-image: url('/icon_loading_medium.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .demoSection__pluginImage {
-    max-width: 494px;
-    width: 100%;
-    height: auto;
-    border-radius: 8.782px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-    position: relative;
-    z-index: 2;
+  max-width: 494px;
+  width: 100%;
+  height: auto;
+  border-radius: 8.782px;
+  box-shadow: var(--shadow-medium);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .demoSection__description {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: var(--spacing-400);
-    position: relative;
-    z-index: 2;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--spacing-400);
+  position: relative;
+  z-index: 2;
 }
 
 .demoSection__descriptionText {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-300);
-    max-width: 462px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  max-width: 462px;
 }
 
 .demoSection__descriptionTitle {
-    font-family: 'Baloo Tammudu 2', sans-serif;
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xxlarge);
-    line-height: 40px;
-    color: #282b67;
-    margin: 0;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xxlarge);
+  line-height: 40px;
+  color: var(--background);
+  margin: 0;
 }
 
 .demoSection__descriptionSubtitle {
-    font-family: 'Baloo Tammudu 2', sans-serif;
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-medium);
-    line-height: 24px;
-    color: #282b67;
-    margin: 0;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: 24px;
+  color: var(--background);
+  margin: 0;
 }
 
 /* Responsive design
@@ -206,149 +205,149 @@
 
 /* Standard desktop (1200px - 1399px) */
 @media (max-width: 1399px) {
-    .demoSection {
-        margin: var(--spacing-500) var(--spacing-400);
-        padding: 0 var(--spacing-500);
-    }
+  .demoSection {
+    margin: var(--spacing-500) var(--spacing-400);
+    padding: 0 var(--spacing-500);
+  }
 }
 
 /* Medium desktop (1024px - 1199px) */
 @media (max-width: 1199px) {
-    .demoSection {
-        padding: 0 var(--spacing-450);
-    }
+  .demoSection {
+    padding: 0 var(--spacing-450);
+  }
 
-    /* Start making the preview layout more flexible */
-    .demoSection__preview {
-        flex-direction: column;
-        gap: var(--spacing-450);
-    }
+  /* Start making the preview layout more flexible */
+  .demoSection__preview {
+    flex-direction: column;
+    gap: var(--spacing-450);
+  }
 
-    .demoSection__description {
-        padding-left: 0;
-    }
+  .demoSection__description {
+    padding-left: 0;
+  }
 
-    .demoSection__descriptionText {
-        text-align: center;
-    }
+  .demoSection__descriptionText {
+    text-align: center;
+  }
 }
 
 /* Tablet (768px - 1023px) */
 @media (max-width: 1023px) {
-    .demoSection {
-        margin: var(--spacing-400) var(--spacing-300);
-        padding: 0 var(--spacing-400);
-    }
+  .demoSection {
+    margin: var(--spacing-400) var(--spacing-300);
+    padding: 0 var(--spacing-400);
+  }
 
-    .demoSection__preview {
-        flex-direction: column;
-        gap: var(--spacing-400);
-    }
+  .demoSection__preview {
+    flex-direction: column;
+    gap: var(--spacing-400);
+  }
 
-    .demoSection__description {
-        padding-left: 0;
-    }
+  .demoSection__description {
+    padding-left: 0;
+  }
 
-    .demoSection__descriptionText {
-        text-align: center;
-    }
+  .demoSection__descriptionText {
+    text-align: center;
+  }
 
-    /* Adjust background images for tablet */
-    .demoSection__content::before {
-        width: 382px;
-        height: 400px;
-    }
+  /* Adjust background images for tablet */
+  .demoSection__content::before {
+    width: 382px;
+    height: 400px;
+  }
 
-    .demoSection__preview::after {
-        width: 282px;
-        height: 184px;
-    }
+  .demoSection__preview::after {
+    width: 282px;
+    height: 184px;
+  }
 }
 
 /* Small tablet (600px - 767px) */
 @media (max-width: 767px) {
-    .demoSection {
-        margin: var(--spacing-300) var(--spacing-250);
-        padding: 0 var(--spacing-350);
-    }
+  .demoSection {
+    margin: var(--spacing-300) var(--spacing-250);
+    padding: 0 var(--spacing-350);
+  }
 
-    .demoSection__highlight,
-    .demoSection__content,
-    .demoSection__preview {
-        padding-left: var(--spacing-400);
-        padding-right: var(--spacing-400);
-    }
+  .demoSection__highlight,
+  .demoSection__content,
+  .demoSection__preview {
+    padding-left: var(--spacing-400);
+    padding-right: var(--spacing-400);
+  }
 
-    .demoSection__title,
-    .demoSection__descriptionTitle {
-        font-size: var(--font-size-xlarge);
-        line-height: 32px;
-    }
+  .demoSection__title,
+  .demoSection__descriptionTitle {
+    font-size: var(--font-size-xlarge);
+    line-height: 32px;
+  }
 
-    /* Adjust background images for tablet */
-    .demoSection__content::before {
-        width: 312px;
-        height: 330px;
-    }
+  /* Adjust background images for tablet */
+  .demoSection__content::before {
+    width: 312px;
+    height: 330px;
+  }
 
-    .demoSection__preview::after {
-        width: 228px;
-        height: 130px;
-    }
+  .demoSection__preview::after {
+    width: 228px;
+    height: 130px;
+  }
 }
 
 /* Large mobile (480px - 599px) */
 @media (max-width: 599px) {
-    .demoSection {
-        margin: var(--spacing-250) var(--spacing-200);
-        padding: 0 var(--spacing-300);
-    }
+  .demoSection {
+    margin: var(--spacing-250) var(--spacing-200);
+    padding: 0 var(--spacing-300);
+  }
 
-    .demoSection__highlight,
-    .demoSection__content,
-    .demoSection__preview {
-        padding-left: var(--spacing-350);
-        padding-right: var(--spacing-350);
-    }
+  .demoSection__highlight,
+  .demoSection__content,
+  .demoSection__preview {
+    padding-left: var(--spacing-350);
+    padding-right: var(--spacing-350);
+  }
 
-    .demoSection__content::before {
-        width: 280px;
-        height: 300px;
-    }
+  .demoSection__content::before {
+    width: 280px;
+    height: 300px;
+  }
 
-    .demoSection__preview::after {
-        width: 220px;
-        height: 120px;
-    }
+  .demoSection__preview::after {
+    width: 220px;
+    height: 120px;
+  }
 }
 
 /* Small mobile (320px - 479px) */
 @media (max-width: 479px) {
-    .demoSection {
-        margin: var(--spacing-200) var(--spacing-150);
-        padding: 0 var(--spacing-250);
-    }
+  .demoSection {
+    margin: var(--spacing-200) var(--spacing-150);
+    padding: 0 var(--spacing-250);
+  }
 
-    .demoSection__highlight,
-    .demoSection__content,
-    .demoSection__preview {
-        padding-left: var(--spacing-300);
-        padding-right: var(--spacing-300);
-    }
+  .demoSection__highlight,
+  .demoSection__content,
+  .demoSection__preview {
+    padding-left: var(--spacing-300);
+    padding-right: var(--spacing-300);
+  }
 
-    .demoSection__title,
-    .demoSection__descriptionTitle {
-        font-size: var(--font-size-medium);
-        line-height: 28px;
-    }
+  .demoSection__title,
+  .demoSection__descriptionTitle {
+    font-size: var(--font-size-medium);
+    line-height: 28px;
+  }
 
-    .demoSection__content::before {
-        width: 240px;
-        height: 260px;
-    }
+  .demoSection__content::before {
+    width: 240px;
+    height: 260px;
+  }
 
-    .demoSection__preview::after {
-        width: 180px;
-        height: 100px;
-    }
+  .demoSection__preview::after {
+    width: 180px;
+    height: 100px;
+  }
 }

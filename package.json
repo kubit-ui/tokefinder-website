@@ -1,40 +1,49 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "tokefinder-website",
+  "version": "1.0.0",
+  "description": "Official website for TokeFinder - A powerful Figma plugin for searching and filtering design variables",
+  "keywords": ["figma", "plugin", "design-tokens", "design-system", "variables", "nextjs", "react", "typescript"],
+  "homepage": "https://tokefinder.kubit-lab.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/tokefinder-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/tokefinder-website/issues"
+  },
+  "author": {
+    "name": "Kubit",
+    "url": "https://kubit-lab.com"
+  },
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "test": "yarn vitest-report",
+    "test": "yarn run tsc",
     "lint": "next lint",
     "postinstall": "echo postinstall",
-    "test:ci": "yarn lint && yarn test",
-    "vitest": "vitest",
-    "vitest-report": "vitest --ui --coverage.enabled=true",
-    "vitest:watch": "vitest - watch"
+    "test:ci": "yarn lint && yarn test"
   },
   "dependencies": {
-    "next": "^15.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^15.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/react": "^16.2.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@vitejs/plugin-react": "4.5.2",
-    "@vitest/coverage-v8": "^3.2.3",
-    "@vitest/ui": "^3.2.3",
+    "@vitejs/plugin-react": "5.0.4",
     "eslint": "^9",
-    "eslint-config-next": "15.2.1",
-    "jsdom": "^26.0.0",
+    "eslint-config-next": "15.5.4",
+    "jsdom": "^27.0.0",
     "typescript": "^5",
-    "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.3"
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "resolutions": {
     "vite": "^6.0.0"

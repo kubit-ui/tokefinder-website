@@ -1,4 +1,6 @@
 "use client";
+
+import React, { useRef } from "react";
 import styles from "./page.module.css";
 import HeroSection from "./components/heroSection/heroSection";
 import FeaturesSection from "./components/featuresSection/featuresSection";
@@ -6,31 +8,43 @@ import ContentSection from "./components/contentSection/contentSection";
 import DemoSection from "./components/demoSection/demoSection";
 import Footer from "./components/footer/footer";
 import BackToTopButton from "./components/ui/backToTopButton/backToTopButton";
-import { useRef } from "react";
 
-export default function Home() {
-  const footerRef = useRef<HTMLDivElement | null>(null);
-  const backToTopButtonRef = useRef<HTMLButtonElement | null>(null);
+/**
+ * Main home page component that displays all sections of the TokeFinder website
+ * Includes hero, features, demo, content sections, footer, and a back-to-top button
+ * 
+ * @returns React component for the home page
+ */
+export default function Home(): React.ReactElement {
+  const footerRef = useRef<HTMLDivElement>(null);
+  const backToTopButtonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Hero section */}
+      <main className={styles.main} role="main">
+        {/* Hero section with main branding */}
         <HeroSection />
-        {/* Features section */}
+        
+        {/* Product features showcase */}
         <FeaturesSection />
-        {/* Demo section */}
+        
+        {/* Interactive demo section */}
         <DemoSection />
-        {/* Content section */}
+        
+        {/* Additional content and information */}
         <ContentSection />
       </main>
-      {/* Back to top button */}
+      
+      {/* Back to top navigation button */}
       <BackToTopButton
         ref={backToTopButtonRef}
         bottomPosition={32}
         visibilityScrollOffset={800}
         stopElement={footerRef}
+        ariaLabel="Scroll back to top of page"
       />
+      
+      {/* Site footer with links and information */}
       <Footer ref={footerRef} />
     </div>
   );

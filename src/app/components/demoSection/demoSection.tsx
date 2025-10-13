@@ -3,19 +3,35 @@ import Image from "next/image";
 import styles from "./demoSection.module.css";
 
 /**
- * Demo section component showing the Tokefinder plugin in action
+ * Demo section component props
  */
-export default function DemoSection() {
+interface DemoSectionProps {
+  /** Additional CSS class names */
+  className?: string;
+}
+
+/**
+ * DemoSection component showing the Tokefinder plugin in action
+ * Displays multiple preview images and call-to-action content
+ * 
+ * @param props - Component props
+ * @returns React component
+ */
+function DemoSection({ className = "" }: DemoSectionProps = {}): React.ReactElement {
   return (
-    <section className={styles.demoSection}>
+    <section 
+      className={`${styles.demoSection} ${className}`.trim()}
+      aria-labelledby="demo-title"
+    >
       {/* Top section with color selector preview */}
       <div className={styles.demoSection__highlight}>
         <Image
           src="/color_selector_image.png"
-          alt="Color selector interface showing Figma variables"
+          alt="Tokefinder color selector interface showing Figma variables and tokens"
           width={800}
           height={400}
           className={styles.demoSection__colorSelectorImage}
+          priority={false}
         />
       </div>
 
@@ -23,7 +39,10 @@ export default function DemoSection() {
       <div className={styles.demoSection__content}>
         <div className={styles.demoSection__article}>
           <div className={styles.demoSection__text}>
-            <h2 className={styles.demoSection__title}>
+            <h2 
+              id="demo-title"
+              className={styles.demoSection__title}
+            >
               The smart way to search your Figma variables
             </h2>
             <p className={styles.demoSection__subtitle}>
@@ -36,14 +55,16 @@ export default function DemoSection() {
             href="https://www.figma.com/community/plugin/1555496697023365174/tokefinder"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Try Tokefinder plugin on Figma Community (opens in new tab)"
           >
             <span className={styles.demoSection__buttonText}>Try it</span>
             <Image
               src="/icon_link-external.svg"
-              alt="External link"
+              alt=""
               width={16}
               height={16}
               className={styles.demoSection__buttonIcon}
+              aria-hidden="true"
             />
           </a>
         </div>
@@ -53,10 +74,11 @@ export default function DemoSection() {
       <div className={styles.demoSection__preview}>
         <Image
           src="/tokefinder_menu.png"
-          alt="Tokefinder plugin interface preview"
+          alt="Tokefinder plugin menu interface showing search and filter options"
           width={600}
           height={400}
           className={styles.demoSection__pluginImage}
+          priority={false}
         />
         <div className={styles.demoSection__description}>
           <div className={styles.demoSection__descriptionText}>
@@ -73,3 +95,5 @@ export default function DemoSection() {
     </section>
   );
 }
+
+export default DemoSection;
